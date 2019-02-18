@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <script>
+            
+            function jam(){
+       
+                var waktu = new Date();
+                var jam = waktu.getHours();
+                var menit = waktu.getMinutes();
+                var detik = waktu.getSeconds();
+                jam = cekjam(jam);
+                menit= cekjam(menit);
+                document.getElementById("tes").innerHTML = jam + " : "+ menit +" : "+detik;
+                var t = setTimeout(jam, 500);            
+            }
+    
+            function cekjam(i){
+                if(i < 10){
+                    i = "0" + i
+                };
+                return i;
+            }
+
+            
+        </script>
+</head>
+<body onload="jam()">
+    <div id="tes"></div>
+    
+</body>
+</html>
+
+
+
+
+<!-- <html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+</html> -->
+

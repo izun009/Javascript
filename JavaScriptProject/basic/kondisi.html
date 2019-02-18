@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kondisi</title>
+</head>
+<body>
+   
+        <div id="klikah"></div>
+        <button onclick="fungsigue()">Klik dong</button>    
+    <script>
+      function fungsigue(){
+          var w = new Date();
+          var cuy;
+
+          if(w.getHours() > 5 && w.getHours() < 10){
+                cuy = "Selamat Pagi";
+          }else if(w.getHours() > 11 && w.getHours() < 15){
+                cuy = "Selamat Siang";
+          }else if(w.getHours() > 15 && w.getHours() < 18){
+                cuy = "Selamat Sore";
+          }else{
+                cuy = "Selamat Malam";
+          }
+          document.getElementById("klikah").innerHTML = cuy;          
+        }          
+    </script>
+</body>
+</html>

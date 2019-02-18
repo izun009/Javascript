@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Latihan Objek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="bd.css" />
+    <script src="bd.js"></script>
+</head>
+<body>
+    <form name="fform">
+        <h1><center>Data<br>
+        Mahasiswa UNIKOM</center></h1>
+        <hr>
+        <br>
+        <pre>
+            NIM            : <input type="text" size="15" id="nim">
+            Nama           : <input type="text" size="15" id="nama">
+            Jenis Kelamin  : <select size="1" id="jk">
+                             <option value="Perempuan">Perempuan</option>
+                             <option value="Laki-Laki">Laki-Laki</option>
+                             </select>
+            Agama          : <select size="0" id="agama">
+                             <option value="Islam">Islam</option>
+                             <option value="Kristen">Kristen</option>
+                             <option value="Budha">Budha</option>
+                             <option value="Hindu">Hindu</option>
+                             </select>
+            Status         : <input type="radio" value="Kawin" id="kawin">Kawin
+            Jurusan        : <select id="jurusan">
+                             <option value="Informatika">Informatika</option>
+                             <option value="Sistem Informasi">Sistem Informasi</option>
+                             <option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
+                             <option value="Design">Design</option>
+                             </select>
+            Komentar       : 
+                             <textarea id="kom" rows="3" cols="30"></textarea>      
+                             <input type="button" value="kirim" onclick="tekan()">
+                             <input type="reset" value="ulang">                                               
+        </pre>  
+        <H3>Output</H3>
+        <pre>
+        NIM                 :<input type="text" size="15" id="onim">
+        Nama                :<input type="text" size="15" id="onama"> 
+        Jenis Kelamain      :<input type="text" size="15" id="ojk">
+        Agama               :<input type="text" size="15" id="oagama"> 
+        Status              :<input type="text" size="15" id="okawin">
+        Jurusan             :<input type="text" size="15" id="ojurusan">   
+        Komentar            :<textarea id="okom" rows="3" cols="30"></textarea>   
+        </pre>          
+    </form>
+</body>
+</html>

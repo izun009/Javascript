@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function</title>
+</head>
+<body>
+   <form name="fform">
+        <input name="fungsi">       
+   </form> 
+
+   <button onclick="apa('Bewok ')">Klik Dong</button>
+   <button onclick="hapus()">Ulang Dong</button>
+    <p>Fungsi Tambah</p>
+        <p id="fungsi"></p>
+
+   <script>
+    
+    //fungis perhitungan
+   function tambah(a,b){
+       var hasil=a+b;
+       return hasil;
+   }
+   document.getElementById("fungsi").innerHTML=tambah(5,5);
+
+    //fungsi isi
+   function apa(isinya){
+       document.fform.fungsi.value = document.fform.fungsi.value+isinya;
+   }
+
+   //fungsi hapus
+   function hapus(){
+       document.fform.fungsi.value="";
+   }
+   </script> 
+</body>
+</html>

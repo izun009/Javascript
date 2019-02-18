@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        .button{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 24px;
+            color:#c9766c;
+        }
+        .input{
+            width: 200px;
+            height: 40px;
+            font-size: 24px;
+            color: #c9766c;
+        }
+        .main{
+            background: linear-gradient(to right,#070808, #568fae);
+            transform: translateX(-50%) translateY(-50%);
+            height: 100%;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function fill(num){
+            document.depan.belakang.value = document.depan.belakang.value+num;
+            // if(isNaN(num)){
+            //     alert("Masukkan Angka !!!");
+            // }         
+        }
+
+        function smb(sim){            
+            if(sim){
+                document.depan.belakang.value = document.depan.belakang.value+sim;
+            }
+            
+        }
+
+        function clr(){
+            document.depan.belakang.value = "";
+        }
+
+        function erase(){
+            var erase = document.depan.belakang.value;
+            document.depan.belakang.value =erase.substring(0,erase.length-1);
+        }
+
+        function equals(){
+            var eq = document.depan.belakang.value;
+            if(eq){
+                document.depan.belakang.value = eval(eq);
+            }
+        }
+
+    </script>
+
+    <div class="main">
+    <form name="depan">
+        <input class="input" name="belakang">
+    </form>
+    <table>
+        <tr>
+            <td><button class="button" value="C" onclick="clr()"/>C</td>
+            <td><button class="button" value="<" onclick="erase()"/><</td>
+            <td><button class="button" value="/" onclick="smb('/')"/>/</td>
+            <td><button class="button" value="X" onclick="smb('*')"/>X</td>
+        </tr>
+        <tr>
+            <td><button class="button" value="7" onclick="fill(7)"/>7</td>
+            <td><button class="button" value="8" onclick="fill(8)"/>8</td>
+            <td><button class="button" value="9" onclick="fill(9)"/>9</td>
+            <td><button class="button" value="-" onclick="smb('-')"/>-</td>
+        </tr>
+        <tr>
+            <td><button class="button" value="4" onclick="fill(4)"/>4</td>
+            <td><button class="button" value="5" onclick="fill(5)"/>5</td>
+            <td><button class="button" value="6" onclick="fill(6)"/>6</td>
+            <td><button class="button" value="+" onclick="smb('+')"/>+</td>
+        </tr>
+        <tr>
+            <td><button class="button" value="1" onclick="fill(1)">1</td>
+            <td><button class="button" value="2" onclick="fill(2)"/>2</td>
+            <td><button class="button" value="3" onclick="fill(3)"/>3</td>
+            <td rowspan="5"><button style="height:105px" class="button" value="=" onclick="equals()"/>=</td>
+            </tr>
+        <tr>
+            <td colspan="2"><button style="width:105px" class="button" value="0" onclick="fill(0)"/>0</td>
+            <td><button class="button" value="." onclick="smb('.')"/>.</td>
+        </tr>        
+        </table>
+    </div>
+</body>
+</html>

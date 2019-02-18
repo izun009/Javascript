@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="p"></div>
+    <script>
+       var siswa = [{'nama':'izun, ','fakultas':'informatika'},{'nama':'zae, ','fakultas':'komputer'}] 
+       var list = " ";
+       for(var i=0;i<siswa.length;i++){
+           list = `${list} nama = ${siswa[i].nama} fakultas = ${siswa[i].fakultas}<br>`; 
+       }
+       document.getElementById("p").innerHTML=list;
+    </script>
+</body>
+</html>

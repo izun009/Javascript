@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belajar Scope</title>
+</head>
+<body>
+    <div id="a"></div><br>
+    <input type="button" onclick="bocah()" value="kirim"></input>
+    <div id="b"></div>
+    <script>
+        var i = "jenggot"
+        var k = "Panjang"
+        document.getElementById("a").innerHTML=typeof i+" "+i;
+        
+        function bocah(){
+            var j = "bewok"
+            document.getElementById("a").innerHTML=typeof j+" "+i+" "+j+" "+k;
+        }
+        document.getElementById("b").innerHTML= typeof j;
+
+    </script>
+    
+</body>
+</html>
